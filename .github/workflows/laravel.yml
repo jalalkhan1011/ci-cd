@@ -28,7 +28,7 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
     - name: Create Database
       run: php artisan migrate --force
-      touch database/cicd.sql
+      touch cicd.sql
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
       env:
         DB_CONNECTION: mysql
